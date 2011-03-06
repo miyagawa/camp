@@ -1,0 +1,25 @@
+NAME
+    Camp - CPAN Suite (aka cpanminus plus)
+
+SYNOPSIS
+      camp install Modules
+
+INSTALLATION
+      curl -L cpanmin.us | perl - Camp
+
+DESCRIPTION
+    Camp is a fork of cpanminus with more awesomeness.
+
+AUTHOR
+    Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+
+COPYRIGHT
+    Copyright 2011- Tatsuhiko Miyagawa
+
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+SEE ALSO
+    cpanminus
+

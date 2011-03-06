@@ -1,0 +1,18 @@
+#!perl
+use strict;
+use warnings;
+use Camp::CLI;
+
+Camp::CLI->run(@ARGV);
+
+__END__
+
+=head1 NAME
+
+camp - CPAN Suite
+
+=head1 SYNOPSIS
+
+  camp install Plack
+
+=cut
