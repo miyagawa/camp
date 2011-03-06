@@ -26,6 +26,8 @@ sub run {
     @args = ("version")   if $options{version};
 
     my $cmd = (@args && $args[0] =~ /^[a-z]/) ? shift(@args) : "usage";
+    $cmd = "install" if index("index", $cmd) == 0; # :)
+
     my $command = $class->command($cmd);
     if ($command) {
         $command->new(\%options)->run(@args);
