@@ -18,12 +18,14 @@ sub run {
     Getopt::Long::Configure("no_ignore_case", "pass_through");
     Getopt::Long::GetOptionsFromArray(
         \@args,
-        "h|help"  => \$options{help},
+        "h|help"    => \$options{help},
+        "v|version" => \$options{version},
     );
 
     unshift @args, 'help' if $options{help};
+    @args = ("version")   if $options{version};
 
-    my $cmd = shift @args || "usage";
+    my $cmd = (@args && $args[0] =~ /^[a-z]/) ? shift(@args) : "usage";
     my $command = $class->command($cmd);
     if ($command) {
         $command->new(\%options)->run(@args);
